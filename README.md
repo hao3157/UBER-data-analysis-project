@@ -18,9 +18,5 @@ Visualization
 
 
 
-You may downlaod the complete Power Bi file by clicking the link below：
-
- [UBER DATA power bi.pbix](./raw/UBER%20DATA%20power%20bi.pbix)
-
 
 
