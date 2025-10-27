@@ -3,7 +3,7 @@ Hi there:
 This was my first project since I started to learn Python's Pandas library. I accessed this dataset via a platform called "Koggle" where developers can upload their code and share projects.This project focuses on cleaning, analyzing, and visualizing ride service data to uncover operational insights and customer behavior patterns. It combines technical rigor with business storytelling, using modular workflows and scalable design principles.
 
 
-Technologies Used
+
 
 Data Cleaning & Processing
 
@@ -15,5 +15,11 @@ Visualization
 **Power BI**: Designed interactive dashboards to explore ride metrics, cancellation trends, and customer satisfaction.
 
 **Time Series & Behavioral Analysis**: Visualized trends over time and segmented ride patterns by payment method, ratings, and cancellation reasons.
+
+
+
+You may downlaod the complete Power Bi file by clicking the link below：
+
+👉 [Download Uber Data_Report.pbix](./raw/UBER DATA power bi.pbix)
 
 
