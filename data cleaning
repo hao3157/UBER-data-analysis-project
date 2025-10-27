@@ -1,0 +1,25 @@
+import pandas as pd
+ud=pd.read_csv("uber_data.csv")
+print(ud.head(10)) #秀出前10行資料
+print(ud.info())
+print(ud.columns)#欄位名稱
+print(ud.dtypes)#欄位資料型式
+print("資料缺失", ud.isnull().sum()) #資料缺失值分布
+print(ud['Vehicle Type'].unique())
+print(ud['Driver Cancellation Reason'].unique())
+print(ud['Reason for cancelling by Customer'].unique())
+num_cols = ['Avg VTAT','Avg CTAT','Booking Value','Ride Distance','Driver Ratings','Customer Rating']
+for col in num_cols:
+    ud[col] = ud[col].fillna(ud[col].median())
+
+# Filling cancellation/incomplete columns with 0
+ud[['Cancelled Rides by Customer','Cancelled Rides by Driver','Incomplete Rides']] = ud[['Cancelled Rides by Customer','Cancelled Rides by Driver','Incomplete Rides']].fillna(0)
+
+# Filling categorical columns with 'Unknown'
+cat_cols = ['Reason for cancelling by Customer','Driver Cancellation Reason','Incomplete Rides Reason','Payment Method']
+for col in cat_cols:
+    ud[col] = ud[col].fillna('Unknown')
+
+print(ud.isnull().sum())
+
+ud.to_csv('uber_cleaned.csv', index=False)
